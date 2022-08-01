@@ -1,0 +1,23 @@
+Source-Makefile: feeds/packages/net/ua2f/Makefile
+
+Package: ua2f
+Submenu: Routing and Redirection
+Version: 2022-04-21-21a0cf2bc5cf72375c9144300d6a2dc0ca28576d-0
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +ipset +iptables-mod-conntrack-extra +iptables-mod-nfqueue +libnetfilter-conntrack +libnetfilter-queue
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Change User-Agent to Fwords
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: ua2f-2022-04-21-21a0cf2bc5cf72375c9144300d6a2dc0ca28576d.tar.xz
+License: GPL-3.0-only
+Type: ipkg
+Description:   Change User-agent to Fwords to prevent being checked by Dr.Com.
+https://github.com/Zxilly/UA2F
+Tianling Shen <cnsztl@immortalwrt.org>
+@@
+
+

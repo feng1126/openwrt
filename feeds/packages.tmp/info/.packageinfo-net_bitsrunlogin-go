@@ -1,0 +1,25 @@
+Source-Makefile: feeds/packages/net/bitsrunlogin-go/Makefile
+Build-Depends: golang/host
+
+Package: BitSrunLoginGo
+Submenu: Campus Network
+Version: 2.6-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @(aarch64||arm||i386||i686||mips||mips64||mips64el||mipsel||powerpc64||x86_64)
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Bit Srun auto login tool
+Maintainer: 
+Source: BitSrunLoginGo-2.6.tar.gz
+License: AGPL-3.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: Bit Srun auto login tool
+https://github.com/Mmx233/BitSrunLoginGo
+
+@@
+
+

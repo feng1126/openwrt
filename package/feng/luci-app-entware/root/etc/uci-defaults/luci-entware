@@ -1,0 +1,11 @@
+#!/bin/sh 
+
+uci -q batch <<-EOF >/dev/null
+          delete ucitrack.@entware[-1]
+          add ucitrack entware
+          set ucitrack.@entware[-1].init=entware
+          commit ucitrack
+EOF
+
+rm -f /tmp/luci-indexcahe
+exit 0

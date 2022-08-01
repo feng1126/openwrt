@@ -1,0 +1,24 @@
+Source-Makefile: feeds/luci/applications/luci-app-sysuh3c/Makefile
+Build-Depends: lua/host luci-base/host 
+
+Package: luci-app-sysuh3c
+Submenu: 3. Applications
+Version: 1.0-3
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +sysuh3c
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: SYSU H3C 802.1X Client for LuCI
+Maintainer: 
+Source: 
+License: GPL-3.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description:    This package contains LuCI configuration pages for SYSU H3C.
+
+@@
+
+

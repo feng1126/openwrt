@@ -1,0 +1,45 @@
+Source-Makefile: feeds/luci/applications/luci-app-k3usb/Makefile
+Build-Depends: lua/host luci-base/host 
+
+Package: luci-app-k3usb
+Submenu: 3. Applications
+Version: 1.1.0-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_bcm53xx_DEVICE_phicomm-k3
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI Support for k3usb3.0 on or off
+Maintainer: Shenzt <shenzt@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Description:    LuCI Support for k3usb3.0 on or off.
+Shenzt <shenzt@gmail.com>
+@@
+
+Package: luci-i18n-k3usb-zh-cn
+Default: LUCI_LANG_zh-cn||(ALL&&m)
+Version: 1.1.0-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread luci-app-k3usb
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-k3usb - zh-cn translation
+Maintainer: Shenzt <shenzt@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-app-k3usb - 简体中文 (Simplified Chinese)
+Shenzt <shenzt@gmail.com>
+@@
+
+

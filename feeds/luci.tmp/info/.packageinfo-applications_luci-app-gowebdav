@@ -1,0 +1,41 @@
+Source-Makefile: feeds/luci/applications/luci-app-gowebdav/Makefile
+Build-Depends: lua/host luci-base/host 
+
+Package: luci-app-gowebdav
+Submenu: 3. Applications
+Version: 1.0-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +gowebdav
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI support for GoWebDav
+Maintainer: CN_SZTL <cnsztl@immortalwrt.org>
+Source: 
+Type: ipkg
+Description: LuCI support for GoWebDav
+CN_SZTL <cnsztl@immortalwrt.org>
+@@
+
+Package: luci-i18n-gowebdav-zh-cn
+Default: LUCI_LANG_zh-cn||(ALL&&m)
+Version: 1.0-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread luci-app-gowebdav
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-gowebdav - zh-cn translation
+Maintainer: CN_SZTL <cnsztl@immortalwrt.org>
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-app-gowebdav - 简体中文 (Simplified Chinese)
+CN_SZTL <cnsztl@immortalwrt.org>
+@@
+
+

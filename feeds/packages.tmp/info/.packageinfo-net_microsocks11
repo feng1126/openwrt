@@ -1,0 +1,46 @@
+Source-Makefile: feeds/packages/net/microsocks11/Makefile
+Build-Depends: cxxopts
+
+Package: microsocks11
+Version: 2.3.0-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libstdcpp +libpthread
+Conflicts: microsocks
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: A cross-platform SOCKS5 server based on the microsocks project
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: microsocks11-2.3.0.tar.gz
+License: MIT
+LicenseFiles: LICENSE
+Type: ipkg
+Description:   MicroSocks11 is a SOCKS5 library and server based on the microsocks project that uses
+  CMake and C++11 for cross-platform support. MicroSocks11 supports IPv4, IPv6, and DNS.
+https://github.com/EvanMcBroom/microsocks11
+Tianling Shen <cnsztl@immortalwrt.org>
+@@
+
+Package: libmicrosocks11
+Version: 2.3.0-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libstdcpp +libpthread
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lib
+Category: Libraries
+Repository: base
+Title: A cross-platform SOCKS5 library based on the microsocks project
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: microsocks11-2.3.0.tar.gz
+License: MIT
+LicenseFiles: LICENSE
+Type: ipkg
+Description:   MicroSocks11 is a SOCKS5 library and server based on the microsocks project that uses
+  CMake and C++11 for cross-platform support. MicroSocks11 supports IPv4, IPv6, and DNS.
+https://github.com/EvanMcBroom/microsocks11
+Tianling Shen <cnsztl@immortalwrt.org>
+@@
+
+

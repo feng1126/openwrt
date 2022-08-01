@@ -1,0 +1,22 @@
+Source-Makefile: feeds/nas/network/services/linkease/Makefile
+
+Package: linkease
+Submenu: Web Servers/Proxies
+Version: 0.7.7--1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @(arm||x86_64||aarch64)
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: LinkEase - the file cloud
+Maintainer: 
+Source: linkease-binary-0.7.7.tar.gz
+Type: ipkg
+Description:   LinkEase is a file cloud
+https://www.ddnsto.com/linkease/
+
+@@
+
+

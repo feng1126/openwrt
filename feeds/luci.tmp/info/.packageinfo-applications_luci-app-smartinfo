@@ -1,0 +1,41 @@
+Source-Makefile: feeds/luci/applications/luci-app-smartinfo/Makefile
+Build-Depends: lua/host luci-base/host 
+
+Package: luci-app-smartinfo
+Submenu: 3. Applications
+Version: 3.2-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +smartmontools
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI support for Smartinfo
+Maintainer: 
+Source: 
+Type: ipkg
+Description: LuCI support for Smartinfo
+
+@@
+
+Package: luci-i18n-smartinfo-zh-cn
+Default: LUCI_LANG_zh-cn||(ALL&&m)
+Version: 3.2-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread luci-app-smartinfo
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-smartinfo - zh-cn translation
+Maintainer: 
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-app-smartinfo - 简体中文 (Simplified Chinese)
+
+@@
+
+

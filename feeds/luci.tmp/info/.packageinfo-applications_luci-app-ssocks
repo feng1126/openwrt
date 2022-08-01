@@ -1,0 +1,41 @@
+Source-Makefile: feeds/luci/applications/luci-app-ssocks/Makefile
+Build-Depends: lua/host luci-base/host 
+
+Package: luci-app-ssocks
+Submenu: 3. Applications
+Version: 1.0-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +busybox +iptables +ssocksd
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI support for sSocks
+Maintainer: ImmortalWrt
+Source: 
+Type: ipkg
+Description: LuCI support for sSocks
+ImmortalWrt
+@@
+
+Package: luci-i18n-ssocks-zh-cn
+Default: LUCI_LANG_zh-cn||(ALL&&m)
+Version: 1.0-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread luci-app-ssocks
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-ssocks - zh-cn translation
+Maintainer: ImmortalWrt
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-app-ssocks - 简体中文 (Simplified Chinese)
+ImmortalWrt
+@@
+
+

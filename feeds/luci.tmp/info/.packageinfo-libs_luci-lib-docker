@@ -1,0 +1,23 @@
+Source-Makefile: feeds/luci/libs/luci-lib-docker/Makefile
+
+Package: luci-lib-docker
+Submenu: 6. Libraries
+Version: 0.3.4-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @(aarch64||arm||x86_64) @HAS_FPU +luci-lib-jsonc
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: Docker Engine API for LuCI
+Maintainer: lisaac <lisaac.cn@gmail.com>
+Source: luci-lib-docker-0.3.4.tar.gz
+License: AGPL-3.0
+Type: ipkg
+Description: Docker Engine API for LuCI
+https://github.com/lisaac/luci-lib-docker
+lisaac <lisaac.cn@gmail.com>
+@@
+
+

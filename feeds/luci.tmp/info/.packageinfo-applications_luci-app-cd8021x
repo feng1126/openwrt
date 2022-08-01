@@ -1,0 +1,45 @@
+Source-Makefile: feeds/luci/applications/luci-app-cd8021x/Makefile
+Build-Depends: lua/host luci-base/host 
+
+Package: luci-app-cd8021x
+Submenu: 3. Applications
+Version: 1.2.2-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +wpad
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: a wired IEEE 802.1x client for Luci
+Maintainer: max0y <askmaxwork@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Description:    This package contains LuCI configuration pages for wired IEEE 802.1x authentication.
+max0y <askmaxwork@gmail.com>
+@@
+
+Package: luci-i18n-cd8021x-zh-cn
+Default: LUCI_LANG_zh-cn||(ALL&&m)
+Version: 1.2.2-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread luci-app-cd8021x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-cd8021x - zh-cn translation
+Maintainer: max0y <askmaxwork@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-app-cd8021x - 简体中文 (Simplified Chinese)
+max0y <askmaxwork@gmail.com>
+@@
+
+

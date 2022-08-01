@@ -1,0 +1,66 @@
+Source-Makefile: feeds/nas/network/services/ddnsto/Makefile
+
+Package: ddnsto
+Submenu: Web Servers/Proxies
+Version: 3.0.0--1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: DDNS.to - the reverse proxy
+Maintainer: 
+Source: ddnsto-binary-3.0.0.tar.gz
+Type: ipkg
+Description:   DDNS.to is a reverse proxy
+https://www.ddnsto.com/
+
+@@
+
+
+Source-Makefile: feeds/nas/network/services/linkease/Makefile
+
+Package: linkease
+Submenu: Web Servers/Proxies
+Version: 0.7.7--1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @(arm||x86_64||aarch64)
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: LinkEase - the file cloud
+Maintainer: 
+Source: linkease-binary-0.7.7.tar.gz
+Type: ipkg
+Description:   LinkEase is a file cloud
+https://www.ddnsto.com/linkease/
+
+@@
+
+
+Source-Makefile: feeds/nas/network/services/quickstart/Makefile
+
+Package: quickstart
+Submenu: Web Servers/Proxies
+Version: 0.5.3-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @(x86_64||aarch64) +shadow-utils +shadow-useradd +mount-utils +lsblk +e2fsprogs +parted +smartmontools +smartd +mdadm
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Quickstart, the quick start.
+Maintainer: 
+Source: quickstart-binary-0.5.3.tar.gz
+Type: ipkg
+Description:   Quickstart is a dashboard & user guide
+https://easepi.linkease.com/
+
+@@
+
+

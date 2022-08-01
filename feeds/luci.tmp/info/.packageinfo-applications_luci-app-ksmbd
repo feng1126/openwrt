@@ -1,0 +1,79 @@
+Source-Makefile: feeds/luci/applications/luci-app-ksmbd/Makefile
+Build-Depends: lua/host luci-base/host 
+
+Package: luci-app-ksmbd
+Submenu: 3. Applications
+Version: 1-7
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +ksmbd-server
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: Network Shares - KSMBD CIFS/SMB kernel fileserver
+Maintainer: 
+Source: 
+Type: ipkg
+Description: Network Shares - KSMBD CIFS/SMB kernel fileserver
+
+@@
+
+Package: luci-i18n-ksmbd-en
+Default: LUCI_LANG_en||(ALL&&m)
+Version: 1-7
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread luci-app-ksmbd
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-ksmbd - en translation
+Maintainer: 
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-app-ksmbd - English
+
+@@
+
+Package: luci-i18n-ksmbd-zh-cn
+Default: LUCI_LANG_zh-cn||(ALL&&m)
+Version: 1-7
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread luci-app-ksmbd
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-ksmbd - zh-cn translation
+Maintainer: 
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-app-ksmbd - 简体中文 (Simplified Chinese)
+
+@@
+
+Package: luci-i18n-ksmbd-es
+Default: LUCI_LANG_es||(ALL&&m)
+Version: 1-7
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread luci-app-ksmbd
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-ksmbd - es translation
+Maintainer: 
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-app-ksmbd - Español (Spanish)
+
+@@
+
+

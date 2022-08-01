@@ -1,0 +1,48 @@
+Source-Makefile: feeds/packages/utils/thefuck/Makefile
+
+Package: thefuck
+Version: 3.29-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +python3 +python3-codecs +python3-ctypes +python3-setuptools
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: Magnificent app which corrects your previous console command.
+Maintainer: [CTCGFW]Project OpenWrt
+Source: thefuck-3.29.tar.gz
+License: MIT
+LicenseFiles: LICENSE
+Type: ipkg
+Description:   The Fuck is a magnificent app, inspired by a @liamosaur tweet, that corrects errors in previous console commands.
+https://github.com/nvbn/thefuck
+[CTCGFW]Project OpenWrt
+@@
+
+Package: thefuck-src
+Version: 3.29-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: Magnificent app which corrects your previous console command. (sources)
+Maintainer: [CTCGFW]Project OpenWrt
+Source: thefuck-3.29.tar.gz
+License: MIT
+LicenseFiles: LICENSE
+Type: ipkg
+Description:       The Fuck is a magnificent app, inspired by a @liamosaur tweet, that corrects errors in previous console commands.
+
+    This package contains the Python source files for thefuck.
+https://github.com/nvbn/thefuck
+[CTCGFW]Project OpenWrt
+@@
+Config:
+    depends on PACKAGE_thefuck
+@@
+
+

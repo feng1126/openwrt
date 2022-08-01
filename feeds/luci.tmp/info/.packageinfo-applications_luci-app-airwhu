@@ -1,0 +1,41 @@
+Source-Makefile: feeds/luci/applications/luci-app-airwhu/Makefile
+Build-Depends: lua/host luci-base/host 
+
+Package: luci-app-airwhu
+Submenu: 3. Applications
+Version: 1.0-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +mentohust +kmod-ipt-nat6
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI web-interface for Ruijie 802.1X Client with IPv6 NAT
+Maintainer: 
+Source: 
+Type: ipkg
+Description: LuCI web-interface for Ruijie 802.1X Client with IPv6 NAT
+
+@@
+
+Package: luci-i18n-airwhu-zh-cn
+Default: LUCI_LANG_zh-cn||(ALL&&m)
+Version: 1.0-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread luci-app-airwhu
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-airwhu - zh-cn translation
+Maintainer: 
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-app-airwhu - 简体中文 (Simplified Chinese)
+
+@@
+
+

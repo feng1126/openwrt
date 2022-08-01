@@ -1,0 +1,22 @@
+Source-Makefile: feeds/luci/themes/luci-theme-opentomcat/Makefile
+Build-Depends: lua/host luci-base/host 
+
+Package: luci-theme-opentomcat
+Submenu: 4. Themes
+Version: 0.2.50-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: Advanced Tomato Material
+Maintainer: 
+Source: 
+Type: ipkg
+Description: Advanced Tomato Material
+
+@@
+
+

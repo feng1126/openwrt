@@ -1,0 +1,22 @@
+Source-Makefile: feeds/luci/themes/luci-theme-argon-dark-mod/Makefile
+Build-Depends: lua/host luci-base/host 
+
+Package: luci-theme-argon-dark-mod
+Submenu: 4. Themes
+Version: 1.6-20200523
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: Argon Dark Mod Theme
+Maintainer: 
+Source: 
+Type: ipkg
+Description: Argon Dark Mod Theme
+
+@@
+
+

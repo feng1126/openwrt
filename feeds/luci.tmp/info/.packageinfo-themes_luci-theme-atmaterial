@@ -1,0 +1,22 @@
+Source-Makefile: feeds/luci/themes/luci-theme-atmaterial/Makefile
+Build-Depends: lua/host luci-base/host 
+
+Package: luci-theme-atmaterial
+Submenu: 4. Themes
+Version: x-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: ATMaterial Theme
+Maintainer: 
+Source: 
+Type: ipkg
+Description: ATMaterial Theme
+
+@@
+
+

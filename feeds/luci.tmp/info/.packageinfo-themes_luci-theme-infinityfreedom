@@ -1,0 +1,22 @@
+Source-Makefile: feeds/luci/themes/luci-theme-infinityfreedom/Makefile
+Build-Depends: lua/host luci-base/host 
+
+Package: luci-theme-infinityfreedom
+Submenu: 4. Themes
+Version: 1.5.20220504-0
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: Infinity Freedom Theme
+Maintainer: 
+Source: 
+Type: ipkg
+Description: Infinity Freedom Theme
+
+@@
+
+

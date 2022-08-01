@@ -1,0 +1,50 @@
+Source-Makefile: feeds/packages/lang/python/Flask-RESTful/Makefile
+
+Package: python3-flask-restful
+Submenu: Python
+Version: 0.3.9-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +python3-light +python3-flask
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lang
+Category: Languages
+Repository: base
+Title: Simple framework for creating REST APIs
+Maintainer: [CTCGFW] Project OpenWrt
+Source: Flask-RESTful-0.3.9.tar.gz
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Description:   Flask-RESTful provides the building blocks for creating a great REST API.
+https://github.com/flask-restful/flask-restful
+[CTCGFW] Project OpenWrt
+@@
+
+Package: python3-flask-restful-src
+Submenu: Python
+Version: 0.3.9-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lang
+Category: Languages
+Repository: base
+Title: Simple framework for creating REST APIs (sources)
+Maintainer: [CTCGFW] Project OpenWrt
+Source: Flask-RESTful-0.3.9.tar.gz
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Description:       Flask-RESTful provides the building blocks for creating a great REST API.
+
+    This package contains the Python source files for python3-flask-restful.
+https://github.com/flask-restful/flask-restful
+[CTCGFW] Project OpenWrt
+@@
+Config:
+    depends on PACKAGE_python3-flask-restful
+@@
+
+

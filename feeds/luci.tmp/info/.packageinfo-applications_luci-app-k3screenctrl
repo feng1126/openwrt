@@ -1,0 +1,45 @@
+Source-Makefile: feeds/luci/applications/luci-app-k3screenctrl/Makefile
+Build-Depends: lua/host luci-base/host 
+
+Package: luci-app-k3screenctrl
+Submenu: 3. Applications
+Version: 1.1.0-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +phicomm-k3screenctrl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI Support for k3screenctrl
+Maintainer: Hill <lufanzhong@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Description:    LuCI Support for k3screenctrl.
+Hill <lufanzhong@gmail.com>
+@@
+
+Package: luci-i18n-k3screenctrl-zh-cn
+Default: LUCI_LANG_zh-cn||(ALL&&m)
+Version: 1.1.0-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread luci-app-k3screenctrl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-k3screenctrl - zh-cn translation
+Maintainer: Hill <lufanzhong@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-app-k3screenctrl - 简体中文 (Simplified Chinese)
+Hill <lufanzhong@gmail.com>
+@@
+
+

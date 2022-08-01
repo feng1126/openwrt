@@ -1,0 +1,41 @@
+Source-Makefile: feeds/luci/applications/luci-app-argon-config/Makefile
+Build-Depends: lua/host luci-base/host 
+
+Package: luci-app-argon-config
+Submenu: 3. Applications
+Version: 0.9-20210309
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +luci-lib-ipkg +luci-theme-argonv3
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI page for Argon Config
+Maintainer: 
+Source: 
+Type: ipkg
+Description: LuCI page for Argon Config
+
+@@
+
+Package: luci-i18n-argon-config-zh-cn
+Default: LUCI_LANG_zh-cn||(ALL&&m)
+Version: 0.9-20210309
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread luci-app-argon-config
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-argon-config - zh-cn translation
+Maintainer: 
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-app-argon-config - 简体中文 (Simplified Chinese)
+
+@@
+
+

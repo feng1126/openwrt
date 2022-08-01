@@ -1,0 +1,22 @@
+Source-Makefile: feeds/luci/themes/luci-theme-bootstrap-mod/Makefile
+Build-Depends: lua/host luci-base/host 
+
+Package: luci-theme-bootstrap-mod
+Submenu: 4. Themes
+Version: 20220102-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: Bootstrap Mod Theme By Lienol
+Maintainer: 
+Source: 
+Type: ipkg
+Description: Bootstrap Mod Theme By Lienol
+
+@@
+
+

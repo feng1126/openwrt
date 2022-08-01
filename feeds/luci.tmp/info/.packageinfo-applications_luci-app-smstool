@@ -1,0 +1,22 @@
+Source-Makefile: feeds/luci/applications/luci-app-smstool/Makefile
+Build-Depends: lua/host luci-base/host 
+
+Package: luci-app-smstool
+Submenu: 3. Applications
+Version: 1.0-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: SMS Tool for 3G Modem
+Maintainer: 
+Source: 
+Type: ipkg
+Description:    This package contains sms tool for 3G Modem
+
+@@
+
+

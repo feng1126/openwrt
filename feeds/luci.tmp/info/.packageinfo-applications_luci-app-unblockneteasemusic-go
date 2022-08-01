@@ -1,0 +1,22 @@
+Source-Makefile: feeds/luci/applications/luci-app-unblockneteasemusic-go/Makefile
+Build-Depends: lua/host luci-base/host 
+
+Package: luci-app-unblockneteasemusic-go
+Submenu: 3. Applications
+Version: 1.14-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +bash +busybox +unzip +coreutils +coreutils-nohup +curl +dnsmasq-full +ipset +luci-compat +openssl-util +UnblockNeteaseMusic-Go
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI support for UnblockNeteaseMusic-Go
+Maintainer: https://github.com/cnsilvan/luci-app-unblockneteasemusic
+Source: 
+Type: ipkg
+Description: LuCI support for UnblockNeteaseMusic-Go
+https://github.com/cnsilvan/luci-app-unblockneteasemusic
+@@
+
+

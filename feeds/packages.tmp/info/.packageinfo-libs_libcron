@@ -1,0 +1,24 @@
+Source-Makefile: feeds/packages/libs/libcron/Makefile
+
+Package: libcron
+Version: 2021-12-20-5c8de082c16fb0a6dfa3902aa30ec0b9063705de-0
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libstdcpp
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lib
+Category: Libraries
+Repository: base
+Title: A C++ scheduling library using cron formatting
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: libcron-2021-12-20-5c8de082c16fb0a6dfa3902aa30ec0b9063705de.tar.xz
+License: MIT
+LicenseFiles: LICENSE
+Type: ipkg
+Description:   Libcron offers an easy to use API to add callbacks with corresponding
+  cron-formatted strings.
+https://github.com/PerMalmberg/libcron
+Tianling Shen <cnsztl@immortalwrt.org>
+@@
+
+

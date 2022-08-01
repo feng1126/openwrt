@@ -1,0 +1,22 @@
+Source-Makefile: feeds/luci/themes/luci-theme-Butterfly-dark/Makefile
+Build-Depends: lua/host luci-base/host 
+
+Package: luci-theme-Butterfly-dark
+Submenu: 4. Themes
+Version: 2.0-02-20200309
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: Butterfly_dark Theme
+Maintainer: 
+Source: 
+Type: ipkg
+Description: Butterfly_dark Theme
+
+@@
+
+

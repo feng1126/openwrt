@@ -1,0 +1,4 @@
+
+config  entware 'config'
+	option enable '0'
+

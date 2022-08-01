@@ -1,0 +1,21 @@
+Source-Makefile: feeds/packages/utils/mhz/Makefile
+
+Package: mhz
+Version: 2020-05-12-d1ed90e3523ab0300d6e7960eaaa49ef8c41845d-0
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: CPU frequency measurement utility
+Maintainer: 
+Source: mhz-2020-05-12-d1ed90e3523ab0300d6e7960eaaa49ef8c41845d.tar.xz
+Type: ipkg
+Description: CPU frequency measurement utility
+https://github.com/wtarreau/mhz
+
+@@
+
+

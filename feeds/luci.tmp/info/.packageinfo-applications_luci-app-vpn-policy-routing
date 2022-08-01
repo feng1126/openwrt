@@ -1,0 +1,23 @@
+Source-Makefile: feeds/luci/applications/luci-app-vpn-policy-routing/Makefile
+Build-Depends: lua/host luci-base/host 
+
+Package: luci-app-vpn-policy-routing
+Submenu: 3. Applications
+Version: x-69
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +luci-compat +luci-mod-admin-full +vpn-policy-routing
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: VPN Policy-Based Routing Service Web UI
+Maintainer: Stan Grishin <stangri@melmac.net>
+Source: 
+License: GPL-3.0-or-later
+Type: ipkg
+Description:    Provides Web UI for vpn-policy-routing service.
+Stan Grishin <stangri@melmac.net>
+@@
+
+
