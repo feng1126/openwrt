@@ -1,0 +1,87 @@
+#!/bin/sh
+
+
+
+	set system.system.timezone='CST-8'
+	set system.system.zonename='Asia/Shanghai'
+	uci commit system
+
+	uci set luci.main.lang=zh_cn
+	uci commit luci
+
+
+         uci set network.globals.ula_prefix='2fff::/64'
+        uci set network.lan.ip6assign='64'
+        uci set network.lan.ipaddr='10.10.10.10'
+#        uci set network.wan6.peerdns='0'
+#        uci set network.wan6.dns='2001:4860:4860::8888'
+#        uci set network.wan.ipv6=1
+        uci commit network
+
+        uci set dhcp.lan.ra='server'
+        uci set dhcp.lan.dhcpv6='server'     
+        uci set dhcp.lan.ra_management='1'
+        uci set dhcp.lan.ra_default='1'
+        uci set dhcp.lan.leasetime='30m'
+        uci set dhcp.lan.start='10'
+#        uci set dhcp.lan.dhcp_option='6,10.10.10.28'
+        uci commit dhcp
+
+        uci set wireless.@wifi-iface[0].mode='ap'
+        uci set wireless.@wifi-iface[0].ssid='feng'
+        uci set wireless.@wifi-iface[0].encryption='psk2'
+        uci set wireless.@wifi-iface[0].key='feng1126'
+        uci set wireless.radio0.channel='5'
+        uci set wireless.radio0.htmode='HT40'
+        uci set wireless.radio0.country='US'
+#        uci set wireless.radio0.noscan='1'
+
+        uci set wireless.@wifi-iface[1].mode='ap'
+        uci set wireless.@wifi-iface[1].ssid='feng'
+        uci set wireless.@wifi-iface[1].encryption='psk2'
+        uci set wireless.@wifi-iface[1].key='feng1126'
+
+        uci set wireless.radio1.channel='36'
+        uci set wireless.radio1.htmode='VHT160'
+        uci set wireless.radio1.country='US'
+        uci commit wireless
+        wifi down 
+        wifi up
+
+
+    	sed -i '165s/$/\n echo "allow_anonymous true" >> $TCONF/g' /etc/init.d/mosquitto
+
+        uci set fstab.@global[0].anon_mount=1
+        uci commit fstab 
+        
+        
+       echo ""> /etc/firewall.user
+#       echo 'iptables -t nat -A zone_wan_prerouting -j FULLCONENAT' >> /etc/firewall.user
+#	echo 'iptables -t nat -A zone_wan_postrouting -j FULLCONENAT' >> /etc/firewall.user	
+	echo 'iptables -t filter -I INPUT -p tcp -m multiport --dports 80,22,1883,3000,4000,6000,7000,8000,9000 -j ACCEPT' >> /etc/firewall.user
+	echo 'iptables -t filter -I INPUT -p udp -m multiport --dports 80,22,1883,3000,4000,6000,7000,8000,9000  -j ACCEPT' >> /etc/firewall.user
+	echo 'ip6tables -t filter -I INPUT -p tcp -m multiport --dports 80,22,1883,3000,4000,6000,7000,8000,9000  -j ACCEPT' >> /etc/firewall.user
+	echo 'ip6tables -t filter -I INPUT -p udp -m multiport --dports 80,22,1883,3000,4000,6000,7000,8000,9000  -j ACCEPT' >> /etc/firewall.user
+	echo 'ip6tables -t nat -A POSTROUTING -o eth0.2 -j MASQUERADE' >> /etc/firewall.user
+
+
+
+        
+
+
+sed -i '/option disabled/d' /etc/config/wireless
+sed -i '/set wireless.radio${devidx}.disabled/d' /lib/wifi/mac80211.sh
+wifi up
+
+
+sed -i '/DISTRIB_REVISION/d' /etc/openwrt_release
+echo "DISTRIB_REVISION='openwrt'" >> /etc/openwrt_release
+sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release
+echo "DISTRIB_DESCRIPTION='OpenWrt '" >> /etc/openwrt_release
+
+
+
+exit 0
+
+
+
